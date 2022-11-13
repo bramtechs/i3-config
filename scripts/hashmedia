@@ -1,0 +1,11 @@
+#!/bin/sh
+echo "Are you sure?"
+read a
+find -iname \*.webm -exec md5sum '{}' ';' | while read sum file ; do mv "$file" "`dirname $file`/$sum".webm ; done
+find -iname \*.png -exec md5sum '{}' ';' | while read sum file ; do mv "$file" "`dirname $file`/$sum".png ; done
+find -iname \*.jpg -exec md5sum '{}' ';' | while read sum file ; do mv "$file" "`dirname $file`/$sum".jpg ; done
+find -iname \*.jpeg -exec md5sum '{}' ';' | while read sum file ; do mv "$file" "`dirname $file`/$sum".jpeg ; done
+find -iname \*.webm -exec md5sum '{}' ';' | while read sum file ; do mv "$file" "`dirname $file`/$sum".webm ; done
+find -iname \*.gif -exec md5sum '{}' ';' | while read sum file ; do mv "$file" "`dirname $file`/$sum".gif ; done
+find -iname \*.mp4 -exec md5sum '{}' ';' | while read sum file ; do mv "$file" "`dirname $file`/$sum".mp4 ; done
+find -iname \*.webp -exec md5sum '{}' ';' | while read sum file ; do mv "$file" "`dirname $file`/$sum".webp ; done

@@ -1,0 +1,3 @@
+#!/bin/sh
+echo "Asking password for $1"
+keepassxc-cli clip ~/passwords /$1

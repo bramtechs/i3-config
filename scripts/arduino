@@ -1,0 +1,2 @@
+#!/bin/sh
+/opt/arduino-1.8.19/arduino & disown 

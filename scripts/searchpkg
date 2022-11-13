@@ -1,0 +1,7 @@
+#!/bin/sh
+FILE=/tmp/nix-packages
+if [ ! -f "$FILE" ]; then
+	echo Caching packages...
+	nix-env -qaP '.**' > $FILE
+fi
+cat $FILE | grep $1 | less

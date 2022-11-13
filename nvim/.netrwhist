@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/home/bram/dev/go-advent-of-code-2021/three'
+let g:netrw_dirhist_3='/home/bram/dev/go-advent-of-code-2021'
+let g:netrw_dirhist_2='/home/bram/dev/javagame'
+let g:netrw_dirhist_1='/home/bram/.config/nvim'

@@ -1,0 +1,33 @@
+#!/bin/bash
+# Script to access waifu2x (vulkan edition for my case)
+# Usage: $ waifu image.jpg 2 rm
+#   2 is scale (optional)
+#   rm removes the original image (optional)
+
+if [ "$1" = "" ]; then
+    echo "No image path provided"
+else
+    remove=0
+    scale=$2
+    if [ "$2" = "" ]; then
+        echo "Defaulting to scale 2..."
+        scale=2
+    else
+        if [ "$2" = "rm" ]; then
+            remove=1
+            scale=2
+        fi
+        if [ "$3" = "rm" ]; then
+            remove=1
+        fi
+    fi
+
+    ~/dev/waifu/waifu2x-ncnn-vulkan -i "$1" -o "big_$1" -s "$scale" || \
+        remove=0 # do not remove if command fails
+
+    # remove the original with rm
+    if [ "$remove" -eq "1" ]; then
+        echo "Removed the original!"
+        rm "$1"
+    fi
+fi
