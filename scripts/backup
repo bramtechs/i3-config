@@ -1,0 +1,11 @@
+#!/bin/bash
+mkdir -p ~/.nas
+sudo umount ~/.nas
+sudo mount -t cifs -o username=bram,uid=$(id -u),gid=$(id -g) //192.168.0.149/homes/bram ~/.nas
+
+rsync -aP --delete --no-links --exclude-from=".excludes.txt" /home/$USER/ ~/.nas --dry-run > /tmp/files
+
+echo "preview saved in /tmp/files: continue rsync with --delete flag?"
+read a
+
+rsync -aP --delete --no-links --exclude-from=".excludes.txt" /home/$USER/ ~/.nas

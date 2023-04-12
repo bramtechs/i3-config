@@ -1,0 +1,34 @@
+#!/bin/bash
+
+GITHUB="Github"
+HOWEST="HOWEST_Gitlab"
+CANCEL="Cancel"
+
+source ~/.bashrc
+
+PS3="Select git profile: "
+options=($GITHUB $HOWEST $CANCEL)
+select opt in "${options[@]}"
+do
+    case $opt in
+        $GITHUB)
+            git config --replace-all user.name "$GIT_NAME"
+            git config --replace-all user.email "$GIT_EMAIL"
+            break
+            ;;
+        $HOWEST)
+            git config --replace-all user.name "$GIT_HOWEST_NAME"
+            git config --replace-all user.email "$GIT_HOWEST_EMAIL"
+            break
+            ;;
+        $CANCEL)
+            break
+            ;;
+        *) echo "invalid option $opt";
+    esac
+done
+
+echo ""
+echo "Using git profile..."
+git config user.name
+git config user.email

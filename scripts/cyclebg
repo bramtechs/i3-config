@@ -1,0 +1,11 @@
+#/bin/bash
+file=~/.local/share/bgset
+if [ -f "$file" ]; then
+   set=`cat $file`
+   echo Choosing from set $set...
+   img=`ls $set | shuf -n 1`
+   absimg=$set/$img
+   feh --bg-fill $absimg
+else
+    echo "No wallpaper set defined, set one with 'setbgset'" 
+fi

@@ -1,0 +1,15 @@
+#!/bin/bash
+# Warning: lossless speedup, high speeds will slow your video player to a halt
+
+if [ "$1" = ""]; then
+    echo "Provide a video path"
+else
+    if [ "$2" = ""]; then
+        echo "Provide a video framerate"
+    else
+        raw="/tmp/$1_raw.h264"
+        ffmpeg -i "$1" -map 0:v -c:v copy -bsf:v h264_mp4toannexb $raw  && \
+        ffmpeg -fflags +genpts -r "$2" -i $raw -c:v copy "speed_$1"
+    fi
+fi
+

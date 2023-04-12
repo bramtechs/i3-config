@@ -1,0 +1,11 @@
+#!/bin/sh
+# Converts all webp images in working folder to png
+# Requires imagemagick
+
+
+for f in $(find *.webp); do
+	name=${f::-5}.png
+	echo Converting $f to $name...
+	convert $f $name
+done
+

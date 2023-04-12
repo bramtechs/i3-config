@@ -1,0 +1,6 @@
+#/bin/sh
+locales='be
+us'
+choice=$(echo "$locales" | dmenu)
+setxkbmap $choice
+echo "Changed keybindings to $choice"

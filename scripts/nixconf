@@ -1,0 +1,5 @@
+#!/bin/sh
+OLD=($pwd)
+cd /etc/nixos
+sudo nvim .
+cd $OLD

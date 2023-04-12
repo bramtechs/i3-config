@@ -1,0 +1,14 @@
+#!/bin/bash
+# records your entire screen at a specified framerate (default 40)
+if [ "$1" = "" ]; then
+    echo "Provide an output file name"
+else
+    fps=40
+    if [ "$2" = "" ]; then
+         echo "Defaulting to 40 fps..."
+    else
+        fps=$2
+    fi
+    ffmpeg -video_size 1920x1080 -framerate $fps -f x11grab -i :0.0 "$1" 
+fi
+

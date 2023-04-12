@@ -1,0 +1,2 @@
+#!/bin/sh
+sudo modprobe uvcvideo && notify-send "Webcam enabled!"

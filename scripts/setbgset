@@ -1,0 +1,10 @@
+#/bin/bash
+dir=~/images/wallpapers
+set=`ls $dir | dmenu`
+
+# remember choosen set
+abs=$dir/$set
+echo $abs > ~/.local/share/bgset
+
+echo Wallpaper set is set to $abs!
+~/scripts/cyclebg

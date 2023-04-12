@@ -1,0 +1,6 @@
+echo "powersave
+performance
+shedutil
+" | dmenu | xargs echo | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
+cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor 
+echo "Changed CPU governor!"

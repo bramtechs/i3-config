@@ -1,0 +1,22 @@
+#!/bin/bash
+# Downloads music with a quick command
+# Depends on youtube-dl/yt-dlp and spotdl
+
+if [ "$1" = "" ]; then
+    echo "No keyword or url provided!"
+else
+    old=`pwd`
+    cd ~/music/
+    mkdir -p downloads
+    cd downloads
+
+    # if yt is appended, download song from youtube
+    if [ "$2" = "yt" ]; then
+        echo "Downloading from youtube..."
+        yt-dlp "$1" -x --audio-format mp3 --embed-thumbnail --add-metadata
+    else
+        echo "Downloading from spotdl..."
+        spotdl "$1"
+    fi
+    cd $old
+fi
