@@ -642,5 +642,3 @@ awful.spawn.once("megasync")
 -- awful.spawn("virt-manager")
 -- awful.spawn.once("remmina")
 awful.spawn.once("steam")
-
-awful.spawn.once("setxkbmap -option caps:swapescape")
