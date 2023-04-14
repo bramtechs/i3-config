@@ -1,3 +1,9 @@
 #!/bin/bash
 ln -s $(pwd)/.bashrc ~/.bashrc
 ln -s $(pwd)/.emacs ~/.emacs
+
+mkdir -p ~/.config/X11
+ln -s $(pwd)/X11/xinitrc ~/.config/X11/xinitrc
+
+rm -rf ~/.config/awesome
+ln -s $(pwd)/awesome ~/.config

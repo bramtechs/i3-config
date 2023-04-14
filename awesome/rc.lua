@@ -71,10 +71,10 @@ modkey = "Mod4"
 awful.layout.layouts = {
     awful.layout.suit.spiral,
     awful.layout.suit.tile,
-    awful.layout.suit.floating,
+    awful.layout.suit.fair,
     awful.layout.suit.max,
     awful.layout.suit.max.fullscreen,
-    -- awful.layout.suit.fair,
+    awful.layout.suit.floating,
     -- awful.layout.suit.magnifier,
     -- awful.layout.suit.corner.nw,
     -- awful.layout.suit.corner.ne,
@@ -630,15 +630,6 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- }}}
 
 -- Autostart programs
-awful.spawn.once("picom")
-awful.spawn.once("cd ~/dev/music-rpc; ./env/bin/python3 scan.py")
-
 awful.spawn.once("discord")
--- awful.spawn.once("nautilus")
--- awful.spawn.once("firefox")
--- awful.spawn.once("flatpak run com.spotify.Client")
 awful.spawn.once("megasync")
--- awful.spawn.once("pavucontrol")
--- awful.spawn("virt-manager")
--- awful.spawn.once("remmina")
 awful.spawn.once("steam")

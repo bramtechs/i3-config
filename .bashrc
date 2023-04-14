@@ -57,7 +57,7 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;36m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -115,16 +115,12 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-[ -r /home/bram/.byobu/prompt ] && . /home/bram/.byobu/prompt   #byobu-prompt#
 
-alias emacs="emacsclient -c -a 'emacs'"
+# Start awesome window manager if first tty
+if [[ "$(tty)" = "/dev/tty1" ]]; then
+    pgrep awesome || startx "$XDG_CONFIG_HOME/X11/xinitrc"
+fi
 
-PATH="/home/bram/apps/node-v18.9.0-linux-x64/bin/:$PATH"
-. "$HOME/.cargo/env"
-
-PATH="$PATH:/home/bram/dev/static-kanboard/program/"
-PATH="$PATH:/home/bram/dev/flutter/bin/"
-PATH="$PATH:/home/bram/.local/bin"
-
-PATH="$PATH:/home/bram/dev/rustkan/program/"
-PATH="$PATH:/home/bram/.emacs.d/bin/"
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH=$BUN_INSTALL/bin:$PATH
