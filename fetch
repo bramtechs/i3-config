@@ -1,3 +1,0 @@
-#!/bin/bash
-cp ~/.emacs .emacs
-echo "Copied emacs config"
