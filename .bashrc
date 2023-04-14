@@ -121,7 +121,11 @@ if [[ "$(tty)" = "/dev/tty1" ]]; then
     pgrep awesome || startx
 fi
 
-# bun
+# private bashrc
+if [ -f "~/.bashrc_private" ]; then
+    source ~/.bashrc_private
+fi
+
 export BUN_INSTALL="$HOME/.bun"
 export PATH=$BUN_INSTALL/bin:$PATH
 export PATH=$HOME/scripts:$PATH
