@@ -630,6 +630,6 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- }}}
 
 -- Autostart programs
-awful.spawn.once("discord")
 awful.spawn.once("megasync")
-awful.spawn.once("steam")
+awful.spawn.once("flameshot")
+awful.spawn.once("discord")

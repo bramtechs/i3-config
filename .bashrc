@@ -118,7 +118,7 @@ fi
 
 # Start awesome window manager if first tty
 if [[ "$(tty)" = "/dev/tty1" ]]; then
-    pgrep awesome || startx "$XDG_CONFIG_HOME/X11/xinitrc"
+    pgrep awesome || startx ~/.config/X11/xinitrc
 fi
 
 # bun
