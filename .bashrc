@@ -118,9 +118,10 @@ fi
 
 # Start awesome window manager if first tty
 if [[ "$(tty)" = "/dev/tty1" ]]; then
-    pgrep awesome || startx ~/.config/X11/xinitrc
+    pgrep awesome || startx
 fi
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH=$BUN_INSTALL/bin:$PATH
+export PATH=$HOME/scripts:$PATH
