@@ -175,8 +175,7 @@ local tasklist_buttons = gears.table.join(
 
 local function set_wallpaper(s)
     -- Wallpaper
-    local path = "/home/bram/Afbeeldingen/wallpapers/fur/ccb8a2a5877e8545d12d185f0356a013.png"
-    gears.wallpaper.maximized(path, s, true)
+    awful.spawn.once("nitrogen --restore")
 end
 
 -- Re-set wallpaper when a screen's geometry changes (e.g. different resolution)
