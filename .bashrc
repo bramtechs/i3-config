@@ -126,4 +126,5 @@ source ~/.bashrc_private
 export BUN_INSTALL="$HOME/.bun"
 export PATH=$BUN_INSTALL/bin:$PATH
 export PATH=$HOME/scripts:$PATH
+export PATH=$HOME/dev/dotfiles/scripts:$PATH
 . "$HOME/.cargo/env"
