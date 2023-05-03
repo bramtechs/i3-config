@@ -1,11 +1,11 @@
 #!/bin/sh
 picom &
-megasync &
+# megasync &
 flameshot &
-discord &
+# discord &
 xfce4-power-manager &
 gnome-keyring-daemon &
-/usr/lib/pentablet/pentablet &
+# /usr/lib/pentablet/pentablet &
 xrandr --output HDMI-0 --left-of DP-0 &
 numlockx &
 nitrogen --restore &
