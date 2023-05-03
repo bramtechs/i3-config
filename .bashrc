@@ -128,3 +128,13 @@ export PATH=$BUN_INSTALL/bin:$PATH
 export PATH=$HOME/scripts:$PATH
 export PATH=$HOME/dev/dotfiles/scripts:$PATH
 . "$HOME/.cargo/env"
+
+# git aliases
+alias ghf='git fetch --prune'
+alias ghi='git init --initial-branch=main'
+alias ghp='git push'
+alias ghP='git pull'
+alias gha='git add'
+alias ghA='git add .'
+alias ghc='git commit'
+alias ghs='git status'
