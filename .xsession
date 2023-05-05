@@ -9,5 +9,5 @@ gnome-keyring-daemon &
 xrandr --output HDMI-0 --left-of DP-0 &
 numlockx &
 nitrogen --restore &
-~/dev/offline-linux-x64/offline &
+# ~/dev/offline-linux-x64/offline &
 exec awesome
