@@ -138,3 +138,6 @@ alias gha='git add'
 alias ghA='git add .'
 alias ghc='git commit'
 alias ghs='git status'
+
+alias youtube='ytfzf'
+alias suspend='systemctl suspend'

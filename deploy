@@ -9,3 +9,6 @@ rm -rf ~/.config/awesome
 ln -s $(pwd)/awesome ~/.config
 
 ln -s $(pwd)/.tmux.conf ~/.tmux.conf
+
+mkdir -p ~/.config/mpv
+ln -s $(pwd)/mpv/mpv.conf ~/.config/mpv/mpv.conf
