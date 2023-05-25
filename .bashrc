@@ -127,6 +127,7 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH=$BUN_INSTALL/bin:$PATH
 export PATH=$HOME/scripts:$PATH
 export PATH=$HOME/dev/dotfiles/scripts:$PATH
+export PATH=$HOME/dev/zig:$PATH
 . "$HOME/.cargo/env"
 
 # git aliases
@@ -138,6 +139,8 @@ alias gha='git add'
 alias ghA='git add .'
 alias ghc='git commit'
 alias ghs='git status'
+
+alias yarn='yarnpkg'
 
 alias youtube='ytfzf'
 alias suspend='systemctl suspend'

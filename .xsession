@@ -1,13 +1,14 @@
 #!/bin/sh
 picom &
-# megasync &
+megasync &
 flameshot &
-# discord &
+discord &
 xfce4-power-manager &
 gnome-keyring-daemon &
-# /usr/lib/pentablet/pentablet &
-xrandr --output HDMI-0 --left-of DP-0 &
 numlockx &
 nitrogen --restore &
-# ~/dev/offline-linux-x64/offline &
+/opt/PreMiD-Portable.AppImage --no-sandbox &
+
+xrandr --output DisplayPort-0 --mode 2560x1440 --rate 144
+xrandr --output HDMI-A-0 --left-of DP-0
 exec awesome
