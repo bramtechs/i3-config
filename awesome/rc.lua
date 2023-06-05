@@ -522,11 +522,11 @@ awful.rules.rules = {
         properties = { titlebars_enabled = true }
     },
 
---    -- Firefox
---    {
---        rule = { class = "Firefox-esr" },
---        properties = { screen = 1, tag = "1" }
---    },
+    -- gamedev preview
+    {
+        rule = { class = "bullet_game" },
+        properties = { screen = 2 }
+    },
 --    -- File manager
 --    {
 --        rule = { class = "org.gnome.Nautilus" },
