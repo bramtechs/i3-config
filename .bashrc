@@ -144,7 +144,8 @@ alias ghs='git status'
 alias yarn='yarnpkg'
 
 # cmake aliases
-alias cmg='cmake -S . -B build'
+alias cmgcb='cmake -DCMAKE_BUILD_TYPE=Debug -S . -B build -G "CodeBlocks - Unix Makefiles"'
+alias cmg='cmake -DCMAKE_BUILD_TYPE=Debug -S . -B build'
 alias cmb='cmake --build build -j$(nproc)'
 
 # gay screenfetch
