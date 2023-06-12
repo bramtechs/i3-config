@@ -123,6 +123,7 @@ fi
 
 source ~/.bashrc_private
 
+export WASI_SDK_PATH="/opt/wasi-sdk"
 export BUN_INSTALL="$HOME/.bun"
 export PATH=$BUN_INSTALL/bin:$PATH
 export PATH=$HOME/scripts:$PATH
@@ -141,6 +142,10 @@ alias ghc='git commit'
 alias ghs='git status'
 
 alias yarn='yarnpkg'
+
+# cmake aliases
+alias cmg='cmake -S . -B build'
+alias cmb='cmake --build build -j$(nproc)'
 
 # gay screenfetch
 alias screenfetch='screenfetch | lolcat'
