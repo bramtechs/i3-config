@@ -1,0 +1,3 @@
+#!/bin/bash
+xsetwacom --set $1 MapToOutput DisplayPort-0
+xsetwacom --set $2 MapToOutput DisplayPort-0
