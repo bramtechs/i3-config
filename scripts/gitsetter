@@ -2,12 +2,13 @@
 
 GITHUB="Github"
 HOWEST="HOWEST_Gitlab"
+FUR="Fursona"
 CANCEL="Cancel"
 
 source ~/.bashrc
 
 PS3="Select git profile: "
-options=($GITHUB $HOWEST $CANCEL)
+options=($GITHUB $HOWEST $FUR $CANCEL)
 select opt in "${options[@]}"
 do
     case $opt in
@@ -19,6 +20,11 @@ do
         $HOWEST)
             git config --replace-all user.name "$GIT_HOWEST_NAME"
             git config --replace-all user.email "$GIT_HOWEST_EMAIL"
+            break
+            ;;
+        $FUR)
+            git config --replace-all user.name "$GIT_FUR_NAME"
+            git config --replace-all user.email "$GIT_FUR_EMAIL"
             break
             ;;
         $CANCEL)
