@@ -154,3 +154,5 @@ alias neofetch='screenfetch | lolcat'
 
 alias youtube='ytfzf'
 alias suspend='systemctl suspend'
+
+unset MAILCHECK
