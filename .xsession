@@ -9,7 +9,9 @@ numlockx &
 /opt/PreMiD-Portable.AppImage --no-sandbox &
 
 xrandr --output DisplayPort-0 --mode 2560x1440 --rate 144
-xrandr --output HDMI-A-0 --left-of DisplayPort-0
+xrandr --output HDMI-A-0 --off
+#xrandr --output DisplayPort-0 --mode 2560x1440 --rate 144
+#xrandr --output HDMI-A-0 --left-of DisplayPort-0
 nitrogen --restore
 
 # enable soft touchpad
