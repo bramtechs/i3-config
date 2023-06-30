@@ -1,0 +1,4 @@
+for (( i = 0; i < 256; i++ )); do
+    printf '\e[38;5;%dma\e[0m' "$i"
+done
+printf '\n'
