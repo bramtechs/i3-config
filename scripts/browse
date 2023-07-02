@@ -1,0 +1,13 @@
+#!/bin/bash
+URL=https://www.google.com/search?q=
+
+QUERY=""
+SPACE=%20
+for arg in "$@"
+do
+    QUERY=$QUERY$SPACE$arg
+done
+
+
+echo Navigating to $URL$QUERY...
+lynx $URL$QUERY -accept_all_cookies -use_mouse -cookie_file=~/.lynx_cookies -cookies
